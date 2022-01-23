@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class YouTubeTest {
+public class C02_YouTubeTest {
 
   // 1) Bir class oluşturun: YoutubeAssertions
     //2) https://www.youtube.com adresine gidin

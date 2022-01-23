@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import java.util.List;
 
-public class treeSlidersTest {
+public class C04_treeSlidersTest {
 
 
      // 1) Open the browser
@@ -72,7 +72,7 @@ public class treeSlidersTest {
 
     @AfterClass
     public  static void  treaddown(){
-
+    driver.close();
 
     }
 

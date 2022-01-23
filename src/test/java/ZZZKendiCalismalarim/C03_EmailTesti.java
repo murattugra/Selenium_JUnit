@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class EmailTesti {
+public class C03_EmailTesti {
 
 
 

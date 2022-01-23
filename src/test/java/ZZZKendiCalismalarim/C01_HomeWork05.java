@@ -11,10 +11,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
-import java.util.Arrays;
 import java.util.List;
 
-public class HomeWork05 {
+public class C01_HomeWork05 {
 
     static WebDriver driver;
     static WebElement aramaKutusu;
