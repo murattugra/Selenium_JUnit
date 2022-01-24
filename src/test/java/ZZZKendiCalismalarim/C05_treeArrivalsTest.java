@@ -74,19 +74,37 @@ public class C05_treeArrivalsTest {
 
     @Test
     public void basketTest(){
-        driver.findElement(By.xpath("(//img[@class='attachment-shop_catalog size-shop_catalog wp-post-image'])[1]")).click();
+        driver.findElement(By.xpath("(//img[@class='attachment-shop_catalog size-shop_catalog wp-post-image'])[2]")).click();
         driver.findElement(By.xpath("//button[text()='Add to basket']")).click();
         WebElement wiev=driver.findElement(By.xpath("//div[@class='woocommerce-message']"));
 
         Assert.assertTrue(wiev.isDisplayed());
+        // 10) O kitabı sepetinize ekleyen Sepete Ekle düğmesine tıklayın.
+        driver.findElement(By.xpath("//a[text()='View Basket']")).click();
+        //11) Kullanıcı o Kitabı Menü öğesinde fiyatla görüntüleyebilir.
+        WebElement kitapIsim=driver.findElement(By.xpath("//td[@class='product-name']"));
+        Assert.assertTrue(kitapIsim.isDisplayed());
+        WebElement kitapFiyat=driver.findElement(By.xpath("(//span[@class='woocommerce-Price-amount amount'])[1]"));
+        Assert.assertTrue(kitapFiyat.isDisplayed());
+        //12) Kullanıcı, o kitabı Sepetine ekleyen Sepete Ekle düğmesine tıklayarak bir kitap ekleyebilir.
+
+
 
 
     }
 
 
 
+    //12) Kullanıcı, o kitabı Sepetine ekleyen Sepete Ekle düğmesine tıklayarak bir kitap ekleyebilir.
+    //13) Stoktaki kitaplardan daha fazla kitap seçin.Örneğin stokta 20 kitap varsa 21 eklemeyi deneyin.
+    //14) Sepete ekle butonuna tıklayın
+    //15) Şimdi 1 ile 20 arasında bir değer girmeniz gerekiyormuş gibi bir hata mesajı veriyor.
+
+
+
+
     @AfterClass
-    public static void treaddown(){
+    public static void treadown(){
         //driver.close();
 
     }
