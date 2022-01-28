@@ -67,9 +67,9 @@ public class C05_YoutubeAssertions {
 
 
     }
-
-
-
+//******************************************************************
+// @FixMethodOrder(MethodSorters.NAME_ASCENDING)  ************  Test leri siralamasi ile yapmasi icin
+//****************************************************************
 @AfterClass
   public static void treaddown(){
 
