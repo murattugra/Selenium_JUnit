@@ -38,10 +38,10 @@ driver.get("https://www.amazon.com");
 
         driver.findElement(By.xpath("//a[@data-csa-c-content-id='nav_ya_signin']")).click();
         WebElement emailBox=driver.findElement(By.xpath("//input[@tabindex='1']"));
-        emailBox.sendKeys("mrterkmglsv@gmail.com");
+        emailBox.sendKeys("sgsdgsdg");
         Actions actions=new Actions(driver);
         actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
-        actions.sendKeys("mg10121012").sendKeys(Keys.ENTER).perform();
+        actions.sendKeys("gsdgdsgsdg").sendKeys(Keys.ENTER).perform();
         // login işlemi kontrol edin
         WebElement muratElement=driver.findElement(By.xpath("//span[.='Hello, Murat']"));
         Assert.assertTrue(muratElement.isDisplayed());
@@ -69,10 +69,15 @@ driver.findElement(By.id("twotabsearchtextbox")).sendKeys("msi"+Keys.ENTER);
         WebElement nextButtonButton1=driver.findElement(By.xpath("//a[.='Next']"));
         jse.executeScript("arguments[0].scrollIntoView();", nextButtonButton1);
 
-        WebElement ikinciSayfaSecimi=driver.findElement(By.xpath("//span[.='2']"));
+        String ikinciSayfaSecimi=driver.findElement(By.xpath("//span[.='2']")).getText();
+        String ikinciSayfaSecimiClassLocate=driver.findElement(By.xpath("//span[@class='s-pagination-item s-pagination-selected']")).getText();
+        Assert.assertEquals(ikinciSayfaSecimi,ikinciSayfaSecimiClassLocate);
 
         //sayfadaki 2. ürün favorilere eklenir
+        driver.findElement(By.xpath("(//img[@class='s-image'])[2]")).click();
+        driver.findElement(By.id("add-to-cart-button")).click();
         // 2. ürünün favorilere eklendigi kontrol edilir
+
         // hesabım->  favori listem sayfasına gidilir
         // favori Listem sayfası açıldıgı kontrol edilir
         // eklenen ürün favorilerden silinir
