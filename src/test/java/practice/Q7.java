@@ -52,7 +52,7 @@ public class Q7 {
 
     @After
     public void tearDown(){
-
+    driver.close();
 
     }
 
